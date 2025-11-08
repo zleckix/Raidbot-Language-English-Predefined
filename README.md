@@ -57,3 +57,6 @@
 **Ping**
 
 - Displays the bot's latency.
+
+## Creator :
+**Zydrex**
