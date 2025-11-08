@@ -1,5 +1,7 @@
 # RaidBot English Predefined
 
+## Discord Server : https://discord.gg/b2DGCmzqcJ
+
 ### Commands:
 
 1. **Clear All**
