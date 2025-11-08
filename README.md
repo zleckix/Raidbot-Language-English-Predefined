@@ -60,3 +60,5 @@
 
 ## Creator :
 **Zydrex**
+
+<img width="720" height="514" alt="Captura de pantalla 2025-10-26 113854" src="https://github.com/user-attachments/assets/713df906-b024-4221-980d-077ac1a87063" />
